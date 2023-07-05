@@ -1,0 +1,28 @@
+.juego
+{
+    width: 1050px;
+    height:600px;
+    border: 1px solid black;
+    position: relative;
+}
+#personaje 
+{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+}
+#covao 
+{
+    width: 70px;
+    height: 50px;
+    position: absolute;
+    top: 550px;
+    left: 900px;
+}
+.obstaculo {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+}

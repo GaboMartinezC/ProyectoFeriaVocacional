@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(event) {
     //La primera dimensión son los x y la segunda las y
-    const posicionesEnemigosX = [950, 0];
+    const posicionesEnemigosX = [950, 0, 1000];
     const posicionesEnemigosY = [250, 350, 400];
     const personaje = document.getElementById("personaje");
     const covao = document.getElementById("covao");
@@ -34,45 +34,42 @@ document.addEventListener("DOMContentLoaded", function(event) {
             posicion.y = newY;
             personaje.style.left = newX + "px";
             personaje.style.top = newY + "px";
-            checkWin();
+            juegoGanado();
             enemigoEncontrado();
         }
     }
 
     function MovimientoValido(x, y) {
-        if (x < 0 || x > 999 || y < 0 || y > 550) {
-            return false; // Movimiento fuera del límite del juego
+        if (x < 0 || x > 1000 || y < 0 || y > 550) {
+            return false;
         }
 
         for (let obstaculo of listaObstaculos) {
             if (x === obstaculo.offsetLeft && y === obstaculo.offsetTop) {
-                return false; // Movimiento en un obstáculo
+                return false;
             }
         }
 
-        return true; // Movimiento válido
+        return true;
     }
 
-    function checkWin() 
+    const juegoGanado = () =>
     {
-        if (posicion.x === covao.offsetLeft && posicion.y === covao.offsetTop) {
+        if (posicion.x === 900 && posicion.y === 550) {
             modal.style.display = "block";
+            personaje.style.display = "none"
             window.removeEventListener("keydown", handleKeyPress);
         }
     }
-    function enemigoEncontrado()
+    const enemigoEncontrado = () =>
     {
-        for (let i = 0; i<2; i++)
+        for (let i = 0; i<3; i++)
         {
-            if (posicion.x === posicionesEnemigosX[i])
+            let posicionEnemigo = [posicionesEnemigosX[i], posicionesEnemigosY[i]]
+            if (posicion.x === posicionEnemigo[0] && posicion.y === posicionEnemigo[1])
             {
-                for (let j = 0; j<3; j++)
-                {
-                    if (posicion.y === posicionesEnemigosY[j])
-                    {
-                        modal.style.display = "block";
-                    }
-                }
+                personaje.style.display = "none"
+                modalFin.style.display = "block";
             }
         }
         if (posicion.x === 950 && posicion.y === 250)

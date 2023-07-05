@@ -14,17 +14,17 @@
     <div class="container">
         <div class="juego">
             <!--Personaje y meta-->
-            <img id="personaje" src="https://media.tenor.com/S61VCO73mOAAAAAC/linux-tux.gif" alt="Inicio">
-            <img id="covao" src="assets/img/logo-covao-sin_slogan.png" alt="Inicio">
+            <img id="personaje" src="assets/img/pingu.png" alt="Inicio">
+            <img id="covao" src="assets/img/cole.png" alt="Inicio">
             <!--Obstaculos-->
             <script src="src/obstaculos.js"></script>
             <!--Enemigos-->
-            <img src="assets/img/zaguatillo.png" style="margin-top:250px; margin-left:950px; width: 50px; height: 50px;" alt="">
-            <img src="assets/img/zaguatillo.png" style="margin-top:50px; margin-left:20px; width: 50px; height: 50px;" alt="">
-            <img src="assets/img/zaguatillo.png" style="margin-top:0px; margin-left:1000px; width: 50px; height: 50px;" alt="">
+            <img class = "enemigo" src="assets/img/zaguatillo.png" style="margin-top:250px; margin-left:950px; width: 50px; height: 50px;" alt="">
+            <img class = "enemigo" src="assets/img/zaguatillo.png" style="margin-top:50px; margin-left:20px; width: 50px; height: 50px;" alt="">
+            <img class = "enemigo" src="assets/img/zaguatillo.png" style="margin-top:0px; margin-left:1000px; width: 50px; height: 50px;" alt="">
         </div>
     </div>
-    <!--Modal-->
+    <!--Modal cuando el juego es exitoso-->
     <div id="modalExito" class="miModal">
         <div class="modal-content">
             <span class="cerrar">&times;</span>
@@ -35,17 +35,30 @@
             </div>
         </div>
     </div>
+    <!--Modal cuando se pierde el juego-->
     <div id="modalDerrota" class="miModal">
         <div class="modal-content">
-            <span class="cerrar">&times;</span>
             <h2>¡Derrota!</h2>
             <p>Tux ha sido asustado por un perro</p>
             <div class="container">
-                <img src="assets/img/pingu.gif" style="height: 400px; width: 400px;" alt="">            
+                <img src="assets/img/zaguatillo.gif" style="height: 400px; width: 400px;" alt="">            
             </div>
         </div>
     </div>
+    <!--Modal cuando el dispositivo es móvil-->
+    <div id="modalCelular" class="miModal">
+        <div class="modal-content">
+            <h2>¡Bienvenido!</h2>
+            <p>Si buscas la experiencia completa, intenta acceder mediante un dispositivo de escritorio</p>
+            <div class="container">
+                <img src="assets/img/zaguatillo.gif" style="height: 400px; width: 400px;" alt="">            
+            </div>
+        </div>
+    </div>
+    <!--Script para manejar el modal-->
     <script src="src/modal.js"></script>
+    <!--Script para verificar si el dispositivo es apto-->
+    <script src="src/verificarDispositivo.js"></script>
 <hr>
 </body>
 </html>

@@ -1,5 +1,6 @@
 const modal = document.getElementById("modalExito");
 const modalFin = document.getElementById("modalDerrota");
+const modalNoDesktop = document.getElementById("modalCelular");
 const btnCerrar = document.getElementsByClassName("cerrar")[0];
 //Eventos del Modal
 
@@ -9,9 +10,13 @@ btnCerrar.addEventListener("click", function()
 });
 window.addEventListener("click", function(event) 
 {
-    if (event.target === modal || event.target ===modalFin) 
+    if (event.target === modal || event.target === modalFin) 
     {
         Recargar();
+    }
+    if (event.target === modalNoDesktop)
+    {
+        modalNoDesktop.style.display = "none"
     }
 });
 const Recargar = () =>

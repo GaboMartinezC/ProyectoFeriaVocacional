@@ -13,10 +13,10 @@ function isDesktop()
 {
     return !isMobileDevice() && !isTablet();
 }
-if (isDesktop())
+if (!isDesktop())
 {
     const juego = Array.from(document.getElementsByClassName("juego"))[0];
-    const modal = getElementById("modalCelular");
+    const modal = document.getElementById("modalCelular");
     juego.style.display = "none";
-    modal.style.display = "block"
+    modal.style.display = "block";
 }

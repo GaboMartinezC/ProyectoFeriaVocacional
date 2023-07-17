@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@800&display=swap');
+@import url('https://fonts.cdnfonts.com/css/mrs-kichinto');
+:root{
+    --font-1:'Poppins', sans-serif;
+    --font-2: 'Mrs Kichinto', sans-serif;
+}
+*{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: none;
+}
+body{
+    
+    background-image: url(../assets/cielo.jpeg);
+    background-position: left;
+    background-repeat: no-repeat;
+    user-select: none;
+}
+.cronometro{
+    position: absolute;
+    left: 0;
+    backdrop-filter: blur(10px);
+    transition: .3s all ease;
+    font-size: 1.8rem;
+    top: 0;
+    margin: 1rem;
+    font-family: var(--font-2);
+    padding-inline: 3rem;
+    padding-block:.7rem;
+    padding-block-start: 1rem;
+    width: 4rem;
+    border-radius: 25px;
+    letter-spacing: .2rem;
+    border:5px solid black;
+    background-color: #ffffff85;
+}
+.title{
+    position: absolute; 
+    margin-block-start: 1rem;
+    font-size: 2rem;
+    font-family: var(--font-2);
+    border: 5px solid black;
+    letter-spacing: .2rem;
+    background-color: #ffffff85;
+    padding: .5rem;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    padding-inline: 2rem;
+    padding-block-start: 1rem;
+    top: 0;
+}
+.nube-fondo img{
+    z-index: -1;
+    position: absolute;
+    translate: 900px -150px;
+    transition: 1s all ease;
+    width: 22vw;
+    animation-name: nubecita;
+    animation-duration:60s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes nubecita {
+    100%{
+        translate: -1000px -150px;
+    }
+}
+.iniciar{
+    font-family: var(--font-2);
+    font-size: 1.5rem;
+    letter-spacing: .3rem;
+    position: absolute;
+    bottom: 35vh;
+    transition: .3s all ease;
+    animation-name: iniciar;
+    animation-duration: 3s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+}
+@keyframes iniciar {
+    50%{
+        translate: 0 -5px;
+    }
+}
+.container{
+    height: 90vh;
+}
+.pj{
+    position: absolute;
+    padding: 1.5rem;
+    transition: .5s all ease;
+    animation-name: flotar-pj;
+    animation-duration: 2s;
+    animation-delay: .5s;
+    animation-iteration-count: infinite;
+}
+#personaje{
+    display: flex;
+    flex-direction: column;
+}
+@keyframes flotar-pj {
+    50%{
+        translate: 0 8px;
+    }
+}
+.pj img{
+    width: 17vw;
+    
+}
+.pj img:first-child{
+    height: auto;
+    translate: 0 130px;
+    width:7rem;
+}
+.estrella img{
+    position: absolute;
+    top: -105px;
+    width: 8vw;
+    object-fit: contain;
+}
+.piso{
+    width: 100vw;
+    position: absolute;
+    background-image: url("../assets/piso.png");
+    background-position: center;
+    background-repeat: repeat;
+    bottom: 0;
+    height: 20vh;
+}
+script{
+    display:none;
+}

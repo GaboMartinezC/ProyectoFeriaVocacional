@@ -4,3 +4,8 @@
     font-family:  'Mrs Kichinto', sans-serif;
     margin: 11%;
 }
+.opcionesMenuJuegos{
+    font-size:smaller;
+    border:0.5px solid white;
+    padding: 0.5%;
+}

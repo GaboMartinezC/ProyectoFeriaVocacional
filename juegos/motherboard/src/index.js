@@ -75,6 +75,7 @@ function dragStart(event)
         juegoExitoso = false;
       }
     }
-    if (juegoExitoso){modal.style.display = 'block';}
+    if (juegoExitoso){modalExito.style.display = 'block';}
+    else{modalDerrota.style.display = 'block'}
     
   }

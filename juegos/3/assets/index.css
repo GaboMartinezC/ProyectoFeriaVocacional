@@ -25,6 +25,7 @@
 }
 .placaMadre{
     border: 0.5px solid black;
+    border-radius: 2%;
     background-image: url(img/mb.png);
     background-size: cover;
     width: 100%;
@@ -36,6 +37,7 @@
     margin: 2%;
     margin-left: 10%;
     border: 0.5px solid rgb(255, 255, 255);
+    border-radius: 2%;
     position: relative;
 }
 .espacioDropComponente{

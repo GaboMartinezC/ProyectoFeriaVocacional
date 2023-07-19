@@ -13,16 +13,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
         let newY = posicion.y;
 
         switch (event.keyCode) {
-            case 37: // Left arrow
+            case 37: // A
+            case 65:
                 newX -= 50;
                 break;
-            case 38: // Up arrow
+            case 38: //W
+            case 87:
                 newY -= 50;
                 break;
-            case 39: // Right arrow
+            case 39: // D
+            case 68:
                 newX += 50;
                 break;
-            case 40: // Down arrow
+            case 40: // S
+            case 83:
                 newY += 50;
                 break;
             default:

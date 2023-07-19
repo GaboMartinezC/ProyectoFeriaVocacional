@@ -9,6 +9,8 @@ for (let i = 0; i < lstOpciones.length; i++){
     });
 } 
 const CambiarCaptura = (juego) => {
-    let opcion = juego + ".png";
-    console.log(opcion);
+    let opcion = "assets/img/" + juego + ".png";
+    let opcionJuego = "juegos/" + juego + "/index.html";
+    document.querySelector("a").setAttribute("href", opcionJuego);
+    document.getElementById("imagenFondo").setAttribute("src",opcion);
 }

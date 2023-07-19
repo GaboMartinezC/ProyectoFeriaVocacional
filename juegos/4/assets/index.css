@@ -17,9 +17,6 @@ p, span{
     display: flex;
     justify-content: center;
 }
-.colorCole{
-    background-color: #47bfc4;
-}
 .miModal {
     display: none;
     position: fixed;

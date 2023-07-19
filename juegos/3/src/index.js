@@ -61,6 +61,7 @@ function dragStart(event)
           dropzone.appendChild(item);
           item.classList.remove('dragover');
           conf[i] = item.id;
+          document.getElementById("btnStart").style.display = "flex";
         }
       }
     }

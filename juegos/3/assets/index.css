@@ -14,7 +14,6 @@
     width: 275%;
     height: 100%;
     justify-content: center;
-    border: 1px solid black;
 }
 .componente{
     margin: 20px;
@@ -34,13 +33,16 @@
 .juego{
     width: 1050px;
     height: 50rem;
-    border: 0.5px solid black;
+    margin: 2%;
+    margin-left: 10%;
+    border: 0.5px solid rgb(255, 255, 255);
     position: relative;
 }
 .espacioDropComponente{
-    border: 1px solid black;
-    width: 100px;
-    height: 100px;
+  display: flex;
+  justify-content: center;  
+  width: 100px;
+  height: 100px;
 }
 .miModal {
     display: none;

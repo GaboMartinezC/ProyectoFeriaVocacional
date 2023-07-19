@@ -8,7 +8,6 @@
     display:flex;
     align-items: center;
     justify-content: center;
-    cursor: none;
 }
 body{
     
@@ -18,6 +17,7 @@ body{
     user-select: none;
 }
 .cronometro{
+    z-index: 1;
     position: absolute;
     left: 0;
     backdrop-filter: blur(10px);
@@ -36,7 +36,10 @@ body{
     background-color: #ffffff85;
 }
 .title{
+    z-index: 1;
     position: absolute; 
+    display: flex;
+    flex-direction: column;
     margin-block-start: 1rem;
     font-size: 2rem;
     font-family: var(--font-2);
@@ -49,6 +52,26 @@ body{
     padding-inline: 2rem;
     padding-block-start: 1rem;
     top: 0;
+}
+.stats{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    right: 0;
+    padding: .5rem;
+    margin-block-start: 1rem;
+    font-family: var(--font-2);
+    font-size: 1.5rem;
+    margin: 1rem 2rem;
+    background-color: #ffffff85;
+    border: 4px solid black;
+    width: 270px;
+    border-radius: 1rem;
+    padding-block-start: 1rem;
+    backdrop-filter: blur(10px);
+}
+.stats #contadorEstrellas{
+    margin-inline-start: 10px;
 }
 .nube-fondo img{
     z-index: -1;
@@ -89,14 +112,13 @@ body{
 }
 .pj{
     position: absolute;
+    height: 40px;
     padding: 1.5rem;
     transition: .5s all ease;
     animation-name: flotar-pj;
     animation-duration: 2s;
     animation-delay: .5s;
     animation-iteration-count: infinite;
-}
-#personaje{
     display: flex;
     flex-direction: column;
 }
@@ -114,12 +136,29 @@ body{
     translate: 0 130px;
     width:7rem;
 }
+.estrellas{
+    display: block;
+}
+.estrella{
+    position: absolute;
+    display: none;
+    transition: .5s all ease;
+    animation-name: bajar;
+    animation-duration:30s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    top: -20px;
+}
+@keyframes bajar {
+    100%{
+        translate: 0px 1000px;
+    }
+}
 .estrella img{
     position: absolute;
-    top: -105px;
     width: 8vw;
-    object-fit: contain;
 }
+
 .piso{
     width: 100vw;
     position: absolute;

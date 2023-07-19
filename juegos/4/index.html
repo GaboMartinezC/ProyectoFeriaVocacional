@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html >
-<head data-bs-theme="bg-dark">
+<head>
     <title>Diseño de Software</title>
     <script src="src/index.js"></script>
     <link rel="shortcut icon" href="assets/img/logo-covao-sin_slogan.png" type="image/x-icon">
@@ -10,55 +10,69 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </head>
 <body>
-    <hr>
-    <div class="container">
-        <div class="juego">
-            <!--Personaje y meta-->
-            <img id="personaje" src="assets/img/pingu.png" alt="Inicio">
-            <img id="covao" src="assets/img/cole.png" alt="Inicio">
-            <!--Obstaculos-->
-            <script src="src/obstaculos.js"></script>
-            <!--Enemigos-->
-            <img class = "enemigo" src="assets/img/zaguatillo.png" style="margin-top:250px; margin-left:950px; width: 50px; height: 50px;" alt="">
-            <img class = "enemigo" src="assets/img/zaguatillo.png" style="margin-top:50px; margin-left:20px; width: 50px; height: 50px;" alt="">
-            <img class = "enemigo" src="assets/img/zaguatillo.png" style="margin-top:0px; margin-left:1000px; width: 50px; height: 50px;" alt="">
+    <div style="background-image: url(../../assets/img/fondo.png); background-size: cover;">
+        <br style=" margin-top: 5%;">
+        <div class="container text-center">
+            <h1>Analisis de Software</h1>
         </div>
-    </div>
-    <!--Modal cuando el juego es exitoso-->
-    <div id="modalExito" class="miModal">
-        <div class="modal-content">
-            <span class="cerrar">&times;</span>
-            <h2>¡Victoria!</h2>
-            <p>Tux ha llegado a su destino</p>
-            <div class="container">
-                <img src="assets/img/pingu.gif" style="height: 400px; width: 400px;" alt="">            
+        <h1 class="contenido".>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse molestie quam nulla, in fringilla nunc vestibulum id. Nullam in erat ipsum. Nulla facilisi. Donec urna mauris, lacinia sed condimentum in, congue tristique turpis. Etiam in risus ornare, lobortis nisl vitae, scelerisque eros. Aenean id augue aliquet, varius ipsum ut, sagittis nulla. Proin eu tempus mi. </h1>
+        <div class="container">
+            <div class="juego">
+                <!--Personaje y meta-->
+                <img id="personaje" src="assets/img/pingu.png" alt="Inicio">
+                <img id="covao" src="assets/img/cole.png" alt="Inicio">
+                <!--Obstaculos-->
+                <script src="src/obstaculos.js"></script>
+                <!--Enemigos-->
+                <img class = "enemigo" src="assets/img/zaguatillo.png" style="margin-top:250px; margin-left:950px; width: 50px; height: 50px;" alt="">
+                <img class = "enemigo" src="assets/img/zaguatillo.png" style="margin-top:50px; margin-left:20px; width: 50px; height: 50px;" alt="">
+                <img class = "enemigo" src="assets/img/zaguatillo.png" style="margin-top:0px; margin-left:1000px; width: 50px; height: 50px;" alt="">
             </div>
         </div>
-    </div>
-    <!--Modal cuando se pierde el juego-->
-    <div id="modalDerrota" class="miModal">
-        <div class="modal-content">
-            <h2>¡Derrota!</h2>
-            <p>Tux ha sido asustado por un perro</p>
-            <div class="container">
-                <img src="assets/img/zaguatillo.gif" style="height: 400px; width: 400px;" alt="">            
+        <br>
+        <Footer style="float: right;">
+            <p style="color: white; font-size: larger;">Desarrollo Web</p>
+            <a href="../../">
+                <img src="../../assets/img/efelante.png" alt="" width="100px" >
+            </a>
+        </Footer>
+        <!--Modal cuando el juego es exitoso-->
+        <div id="modalExito" class="miModal">
+            <div class="modal-content">
+                <span class="cerrar">&times;</span>
+                <h2>¡Victoria!</h2>
+                <p>Tux ha llegado a su destino</p>
+                <div class="container">
+                    <img src="assets/img/pingu.gif" style="height: 400px; width: 400px;" alt="">            
+                </div>
             </div>
         </div>
-    </div>
-    <!--Modal cuando el dispositivo es móvil-->
-    <div id="modalCelular" class="miModal">
-        <div class="modal-content">
-            <h2>¡Bienvenido!</h2>
-            <p>Si buscas la experiencia completa, intenta acceder mediante un dispositivo de escritorio</p>
-            <div class="container">
-                <img src="assets/img/zaguatillo.gif" style="height: 400px; width: 400px;" alt="">            
+        <!--Modal cuando se pierde el juego-->
+        <div id="modalDerrota" class="miModal">
+            <div class="modal-content">
+                <h2>¡Derrota!</h2>
+                <p>Tux ha sido asustado por un perro</p>
+                <div class="container">
+                    <img src="assets/img/zaguatillo.gif" style="height: 400px; width: 400px;" alt="">            
+                </div>
             </div>
         </div>
+        <!--Modal cuando el dispositivo es móvil-->
+        <div id="modalCelular" class="miModal">
+            <div class="modal-content">
+                <h2>¡Bienvenido!</h2>
+                <p>Si buscas la experiencia completa, intenta acceder mediante un dispositivo de escritorio</p>
+                <div class="container">
+                    <img src="assets/img/zaguatillo.gif" style="height: 400px; width: 400px;" alt="">            
+                </div>
+            </div>
+        </div>
+        <!--Script para manejar el modal-->
+        <script src="src/modal.js"></script>
+        <!--Script para verificar si el dispositivo es apto-->
+        <script src="src/verificarDispositivo.js"></script>    
+        
+        <br style=" margin-top: 10%;">
     </div>
-    <!--Script para manejar el modal-->
-    <script src="src/modal.js"></script>
-    <!--Script para verificar si el dispositivo es apto-->
-    <script src="src/verificarDispositivo.js"></script>
-<hr>
 </body>
 </html>

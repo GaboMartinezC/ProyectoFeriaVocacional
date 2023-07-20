@@ -10,11 +10,14 @@
     justify-content: center;
 }
 body{
-    
-    background-image: url(../assets/cielo.jpeg);
-    background-position: left;
-    background-repeat: no-repeat;
     user-select: none;
+    width: 100vw;
+    overflow: hidden;
+}
+.container{
+    background-image: url(../assets/cielo.jpeg);    
+    width: 100vw;
+    z-index: -1;
 }
 .cronometro{
     z-index: 1;
@@ -111,7 +114,9 @@ body{
     height: 90vh;
 }
 .pj{
+    translate: 0 -100px;
     position: absolute;
+    bottom: 100px;
     height: 40px;
     padding: 1.5rem;
     transition: .5s all ease;
@@ -122,19 +127,18 @@ body{
     display: flex;
     flex-direction: column;
 }
+.pj img:first-child{
+    position: absolute;
+    width: 9vw;
+    translate: 0 -10vh;
+}
+.pj img:last-child{
+    width: 20vw;  
+}
 @keyframes flotar-pj {
     50%{
         translate: 0 8px;
     }
-}
-.pj img{
-    width: 17vw;
-    
-}
-.pj img:first-child{
-    height: auto;
-    translate: 0 130px;
-    width:7rem;
 }
 .estrellas{
     display: block;
@@ -144,15 +148,13 @@ body{
     display: none;
     transition: .5s all ease;
     animation-name: bajar;
-    animation-duration:30s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
+    animation-duration:10s;
     top: -20px;
 }
 @keyframes bajar {
     100%{
-        translate: 0px 1000px;
-    }
+        translate: 0px 1000px;  
+    }   
 }
 .estrella img{
     position: absolute;

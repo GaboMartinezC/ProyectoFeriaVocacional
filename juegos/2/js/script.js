@@ -2,10 +2,10 @@ const pj = document.getElementById("personaje");
 let seconds; 
 let estrellasTotales = 0;
 document.addEventListener("DOMContentLoaded", function(event){
-    let posicion = { x: 430, y: 300};
+    let posicion = { x: 430, y:550};
     function handleKeyPress(event) {
         let newX = posicion.x;
-        let newY = posicion.y;
+        let newY = posicion.y;  
         switch (event.keyCode) {
             case 37:
             case 65: // flecha izquierda o 'A'
@@ -50,9 +50,16 @@ let tiempo=75;
 let juegoEmpezado = false;
 let tiempoSetInterval;
 let crono = document.getElementById('cronometro');
-const listaEstrellas = Array.from(document.querySelector('.estrella'));
-let estrellaBajando = 0;
+const listaEstrellas = Array.from(document.getElementsByClassName('estrella'));
+const DefinirEstrellas = (estrella) =>{
+    
+    let puntoA = estrellla.style.left - 40;
+    let puntoB = estrella.style.left;
+    let puntoC = estrella.style.left + 40; 
 
+    return estrella = {a:puntoA,b:puntoB,c:puntoC}
+}
+let estrellaBajando = 0;
 const ConvertirTiempo = (num) => {
    const minutos =  Math.floor(num / 60);
    let segundos = num % 60; 
@@ -60,22 +67,23 @@ const ConvertirTiempo = (num) => {
        segundos = `0${segundos}`
    crono.innerHTML = `${minutos}:${segundos}`
 }
-
 const NumeroRandom = () => {
     let numero = Math.floor(Math.random() * 1250)
     return numero
 }
-
 const PosicionEstrellas = () => {
-    for(let estrella in listaEstrellas)
-        estrella.style.left = `${NumeroRandom()}px`
+    for(let i=0;i<listaEstrellas.length;i++)
+    {
+        listaEstrellas[i].style.left = `${NumeroRandom()}px`
+        listaEstrellas[i] = DefinirEstrellas(listaEstrellas[i])
+    }
 }
 const EstrellaNueva = () => {
     listaEstrellas[estrellaBajando].style.display = 'block';
     if(estrellaBajando === 9)
-        estrellaBajando = 0;
+        estrellaBajando = 0;        
     else
-        estrellaBajando++;
+        estrellaBajando++;  
 }
 const ActuTiempo = () => {
     if(tiempo<=0)
